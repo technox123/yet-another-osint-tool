@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "header/mainwindow.h"
 
 #include <QApplication>
 #include <QLocale>
@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
         }
     }
     MainWindow w;
-    w.setWindowTitle("Yet Another OSINT Tool");
     w.show();
     return a.exec();
 }

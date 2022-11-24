@@ -17,10 +17,19 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 set(TS_FILES yet-another-osint-tool_en_GB.ts)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        #Main Files
+        src/main.cpp
+        src/mainwindow.cpp
+        src/settingshandler.cpp
+
+        #UI Files
+        src/mainwindow.ui
+
+        #Header Files
+        src/header/mainwindow.h
+        src/header/settingshandler.h
+
+        #Translation Files
         ${TS_FILES}
 )
 
@@ -68,3 +77,4 @@ install(TARGETS yet-another-osint-tool
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(yet-another-osint-tool)
 endif()
+
